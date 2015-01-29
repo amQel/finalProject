@@ -8,21 +8,25 @@
 	  <ul>
 		<li>
 		  <h:commandLink action="home?faces-redirect=true">
-			<h:outputText value="#{msg.linkHome}" />
+			<h:outputText value="Strona Glowna" />
 		  </h:commandLink>
 		</li>
 		<li>
-		  <h:commandLink action="add?faces-redirect=true">
-			<h:outputText value="#{msg.personAddLabel}" />
+		  <h:commandLink action="addBuilder?faces-redirect=true">
+			<h:outputText value="Dodaj Budowniczego" />
+		  </h:commandLink></li>
+		  <li>
+		  <h:commandLink action="addCastle?faces-redirect=true">
+			<h:outputText value="Dodaj Zameczek" />
 		  </h:commandLink></li>
 		<li>
-		  <h:commandLink action="showPersons?faces-redirect=true">
-			 <h:outputText value="#{msg.personAllLabel}" />
+		  <h:commandLink action="showBuilders?faces-redirect=true">
+			 <h:outputText value="Pokaz Budowniczych" />
 		  </h:commandLink>
 		</li>
 		<li>
 		  <h:commandLink action="sell">
-			 <h:outputText value=" Sell car" />
+			 <h:outputText value="Sprzedaj Zamek" />
 		  </h:commandLink>
 		</li>
 	</ul>

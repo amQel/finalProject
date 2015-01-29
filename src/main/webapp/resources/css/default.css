@@ -1,20 +1,22 @@
 body {
    margin: 0;
    padding: 0;
-   background-color:  lightGray;
+   background-color:  lightBlue;
    font-family: Verdana, sans-serif;
    font-size: 0.9em;
 }
 
 .heading {
   padding: 10px;
-  background: #FFFFFF;
-  border: 1px solid blue;
+  background: #000000;
+  border: 1px dotted green;
+  
+  color:white;
   font-size: 1.4em;
   font-style: italic;
   font-family: Verdana;
   text-align: center;
-  height: 50px;
+  height: 40px;
 }
 
 .menuAndContent {
@@ -46,4 +48,27 @@ body {
   right: 65px;
   top: 90px;
   height: 80%;
+}
+
+
+.employeeTable{   
+   border-collapse:collapse;
+   border:1px solid #000000;
+}
+
+.employeeTableHeader{
+   text-align:center;
+   background:none repeat scroll 0 0 #B5B5B5;
+   border-bottom:1px solid #000000;  
+   padding:2px;
+}
+
+.employeeTableOddRow{
+   text-align:center;
+   background:none repeat scroll 0 0 #FFFFFFF;	
+}
+
+.employeeTableEvenRow{
+   text-align:center;
+   background:none repeat scroll 0 0 #D3D3D3;
 }

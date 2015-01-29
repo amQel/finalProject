@@ -7,22 +7,22 @@
 
 	<ui:define name="content">
 		<h:form>
-			<h:dataTable value="#{personBean.ownedCars}" var="item">
-				<f:facet name="header">Rented cars</f:facet>
+			<h:dataTable value="#{builderBean.ownedCastles}" var="castle">
+				<f:facet name="header">Jakosc sprzedazy pracownika:</f:facet>
 				<h:column>
-					<f:facet name="header">Make</f:facet>
-					<h:outputText value="#{item.make}" />
+					<f:facet name="header">Typ Zamku: </f:facet>
+					<h:outputText value="#{castle.castleType}" />
 				</h:column>
 
 				<h:column>
-					<f:facet name="header">Model</f:facet>
-					<h:outputText value="#{item.model}" />
+					<f:facet name="header">Kondycja Zamku</f:facet>
+					<h:outputText value="#{castle.condition}" />
 				</h:column>
 
 				<h:column>
-					<f:facet name="header">#{msg.action}</f:facet>
-					<h:commandLink value="#{msg.actionDelete}"
-						action="#{personBean.disposeCar}" />
+					<f:facet name="header">Akcja</f:facet>
+					<h:commandLink value="Usun"
+						action="#{builderBean.disposeCastle}" />
 				</h:column>
 
 			</h:dataTable>

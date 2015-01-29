@@ -8,25 +8,25 @@
 	xmlns:rich="http://richfaces.org/rich">
 
 	<ui:define name="content">
-		<h:form id="personForm">
+		<h:form id="builderForm">
 			<h:panelGrid columns="2">
 
-				<h:outputText value="#{msg.personFirstNameLabel}" />
-				<h:inputText id="firstName" value="#{personBean.person.firstName}"
+				<h:outputText value="Imie Budowniczego" />
+				<h:inputText id="firstName" value="#{builderBean.builder.firstName}"
 					required="#{true}" />
 
-				<h:outputText value="#{msg.personPinLabel}" />
-				<h:inputText id="pin" value="#{personBean.person.pin}" />
+				<h:outputText value="Wiek Budowniczego" />
+				<h:inputText id="pin" value="#{builderBean.builder.wiek}" />
 
-				<h:outputText value="Registration date" />
-				<rich:calendar value="#{personBean.person.registrationDate}"
+				<h:outputText value="Data dolaczenia do spolki" />
+				<rich:calendar value="#{builderBean.builder.registrationDate}"
 					id="calendar" datePattern="dd.MM.yyyy" showApplyButton="#{true}"
 					style="width:200px">
 				</rich:calendar>
 			</h:panelGrid>
 
-			<h:commandButton value="#{msg.personFormOKButton}"
-				action="#{personBean.addPerson}" />
+			<h:commandButton value="OK"
+				action="#{builderBean.addBuilder}" />
 
 			<h:panelGrid>
 				<h:messages for="" />
