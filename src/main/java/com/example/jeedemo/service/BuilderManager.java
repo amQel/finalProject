@@ -25,6 +25,10 @@ public class BuilderManager {
 		builder = em.find(Builder.class, builder.getId());
 		em.remove(builder);
 	}
+	
+	public void update(Builder builder) {
+        em.merge(builder);
+    }
 
 	@SuppressWarnings("unchecked")
 	public List<Builder> getAllBuilder() {

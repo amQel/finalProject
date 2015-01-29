@@ -22,6 +22,9 @@ public class BuilderFormBean implements Serializable {
 	private ListDataModel<Builder> builders = new ListDataModel<Builder>();
 	
 	private Builder builderToShow = new Builder();
+	
+	private Builder builderToEdit = new Builder();
+	
 	private ListDataModel<Castle> ownedCastles = new ListDataModel<Castle>();
 
 
@@ -71,4 +74,20 @@ public class BuilderFormBean implements Serializable {
 		scm.disposeCastle(builderToShow, castleToDispose);
 		return null;
 	}
+	
+	public String editBuilder(){
+		builderToEdit = builders.getRowData();
+		return "editBuilder";
+	}
+	public String saveEdits(){
+		bm.update(builderToEdit);
+		return "showBuilders";
+	}
+	public Builder getBuilderToEdit() {
+		return builderToEdit;
+	}
+	public void setBuilderToEdit(Builder builderToEdit) {
+		this.builderToEdit = builderToEdit;
+	}
+
 }
